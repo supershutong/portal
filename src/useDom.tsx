@@ -48,6 +48,7 @@ export default function useDom(
   // =========================== DOM ===========================
   function append() {
     if (!ele.parentElement) {
+      if (!ele.children?.length) return
       document.body.appendChild(ele);
     }
 
